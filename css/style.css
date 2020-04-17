@@ -16,8 +16,6 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 95vw;
-  height: 95vh;
   margin: 0 auto;
 }
 .container{
@@ -26,27 +24,52 @@ a{
   justify-content: center;
   align-content: space-between;
   text-align: center;
-  height: 100vh;
+  width: 95vw;
+  height: 95vh;
 }
 .main{
-  flex-grow: 1 1 720px;
+  min-width: 65vw;
   text-align: left;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 .main h1{
   font-size: 80px;
   font-weight: lighter;
 }
 .social{
-width: 50vw;
+  min-width: 65vw;
+  height: 10vh;
 }
-.icons{
-  padding: 30px;
+a svg{
+  padding: 20px;
 }
 .footer{
-  flex-grow: 0;
-width: 50vw;
+  min-width: 50vw;
 }
-.footer-content{
-  display: inline-block;
+
+
+@media screen and (max-width:750px){
+  
+  body{
+    font-size: 30px;
+  }
+  
+  .main{
+    text-align: left;
+    margin-top: 50px;
+  }
+
+  .main h1{
+    font-size: 50px;
+    font-weight: lighter;
+  }
+  .social{
+    max-width: 50vw;
+  }
+  .icons{
+    /* margin: 30px; */
+  }
+  .footer{
+    max-width: 50vw;
+  }
 }

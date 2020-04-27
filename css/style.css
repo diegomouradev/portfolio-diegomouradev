@@ -4,6 +4,12 @@ COLOR:
 Dark Grey:  rgba(38, 36, 41, 1)
 Watermelon: rgba(255, 94, 94, 1)
 Light Grey: rgba(230, 230, 230, 1)
+
+// LOGO
+
+$color-primary-green: rgba(255,255,0,1);
+$color-primary-gray: rgba(55,55,55,1);
+$color-primary-blue: rgba(29,29,46,1)
   
 */
 
@@ -17,19 +23,29 @@ Light Grey: rgba(230, 230, 230, 1)
 }
 
 body {
-    background-color: rgba(38, 36, 41, 1);
-    color: rgba(230, 230, 230, 1);
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    position: relative;
-  }
+  background-color: rgba(38, 36, 41, 1);
+  color: rgba(230, 230, 230, 1);
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+}
+
+.heading-logo{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.heading-logo__svg {
+  width: 85px;
+}
 
 .main {
-  position: absolute;
-  top: 30vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+position: absolute;
+top: 30vh;
+left: 50vw;
+transform: translate(-50%, -50%);
 }
 
 .footer{

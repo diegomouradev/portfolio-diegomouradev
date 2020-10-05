@@ -1,0 +1,51 @@
+.header {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#filters {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 0.0rem solid transparent;    
+    transition: all .5s ease-in;
+    
+    &:link {
+        color: $grey-dark-2;
+    }
+
+    &:visited {
+        color: $grey-dark-2;
+    }
+
+    &:hover {
+        color: $grey-dark-2;
+        border-bottom: 0.1rem solid $acent-turquoise;
+    }
+
+    &:active {
+        color: $grey-dark-2;
+        border-bottom: 0.1rem solid $acent-turquoise;
+    }
+
+    &.selected {
+        border-bottom: 0.1rem solid $acent-turquoise; 
+        
+    }
+
+}
+
+.tasks-left {
+    color: $acent-turquoise;
+    font-size: 1.6rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}

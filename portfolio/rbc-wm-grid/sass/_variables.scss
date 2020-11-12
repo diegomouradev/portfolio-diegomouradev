@@ -1,0 +1,38 @@
+/* _______________________________________Colour Variables_______________________________________ */
+
+$blue-grey: #6F6F6F;
+$off-white: #E7EEF1;
+$dirty-gold: #B8A970;
+$black: #252525;
+$blue-grey-overlay: rgba(111, 111, 111, 0.5); // opacity set at 50%, use for overlay on Heros and Banners
+
+
+/* _______________________________________Fonts_______________________________________ */
+    
+  // Font Family
+  $RBC-display: 'RBCDisplayRegular', sans-serif; // Official RBC font style
+  $RBC-roboto: 'RobotoRegular', sans-serif;
+  $Google-roboto: 'Roboto'; // upon working on the task I found the provided font for Roboto different example I should follow.
+  
+  // Font Size
+  $small: 1.4rem;
+  $default: 1.6rem;
+  $medium: 2.0rem;
+  $mdlarge: 2.8rem;
+  $large: 4.2rem;
+  $xlarge: 5.2rem;
+
+/* _______________________________________Measurement Variables_______________________________________ */
+
+$header-padding: 3rem 12rem;
+$section-padding: 10rem 12rem;
+
+$mb-header-padding: 1.5rem 6rem;
+$mb-section-padding: 5rem 6rem;
+
+/* _______________________________________Media Query Set up_______________________________________ */
+
+// RESPONSIVE BREAKPOINTS - for media queries the standard is using 'ems' for measure unit
+$bp-largest: 70em; // 1120px / 16 (font-size) = value in ems
+$bp-medium: 48em;  // 768px / 16 (font-size) = value in ems
+$bp-small: 26.56em; // 425px / 16 (font-size) = value in ems

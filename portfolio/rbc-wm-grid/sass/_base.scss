@@ -1,0 +1,31 @@
+/* _______________________________________Basic reset_______________________________________ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+address {
+    font-style: normal; // <address> tag reset (most browser will display the content in italic)
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // width >= 1440px ? 1 rem = 10px | 10/16 = 62.5%
+
+    // Breakpoints calculation
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 56.25%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 43.7%; 
+    }
+    
+    @media only screen and (max-width: $bp-small) {
+        font-size: 37.5%;
+    }
+}
+

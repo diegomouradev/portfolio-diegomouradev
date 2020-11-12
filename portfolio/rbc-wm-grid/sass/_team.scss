@@ -1,0 +1,58 @@
+.team {  
+  grid-row: 2 / 3;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: solid 0.1rem $off-white;
+
+  @media only screen and (max-width: $bp-largest) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr max-content;
+  }
+  
+  &__container {
+    padding: $section-padding;
+    padding-right: 0;
+
+    @media only screen and (max-width: $bp-largest) {
+      padding-right: 108px;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: $mb-section-padding;
+    }
+  }
+
+  &__image {
+    background-image: url("https://res.cloudinary.com/djot2xc6w/image/upload/v1605170704/rbc-live/src/Images/TeamIntro1_gwykbd.jpg");
+    background-size: cover;
+
+    @media only screen and (max-width: $bp-largest) {
+      background-image: url("https://res.cloudinary.com/djot2xc6w/image/upload/v1605170706/rbc-live/src/Images/TeamIntro1-respond_yd8cos.jpg");
+      height: 60vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 40vh;
+    }
+    @media only screen and (max-width: $bp-small) {
+      height: 20vh;
+    }
+  }
+  
+  &__content {
+
+    &--header {
+      font-family: $RBC-display;
+      font-size: $mdlarge;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+  }
+}

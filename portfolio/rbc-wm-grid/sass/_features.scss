@@ -1,0 +1,109 @@
+.features {
+  grid-row: 3 / 4;
+  padding: $section-padding;
+  padding-top: 5rem;
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 3rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: $mb-section-padding;
+  }
+}
+
+.feature {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-template-columns: min-content 1fr min-content;
+
+  border-bottom: solid 0.1rem #E7EEF1;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: block;
+    text-align: center;
+  }
+
+  &__icon {
+    grid-row: 1 / 3;
+    height: 8rem;
+    margin: 4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 80px;
+    }
+    @media only screen and (max-width: $bp-small) {
+      height: 60px;
+    }
+  }
+
+  &__header {
+    grid-row: 1/2;
+    grid-column: 2/3;
+
+    font-family: $RBC-display;
+    font-size: $medium;
+    align-self: flex-end;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 20px;
+      line-height: 34px;
+    }
+  }
+
+  &__content {
+    grid-row: 2/3;
+    grid-column: 2/3;
+
+    @media only screen and (max-width: $bp-medium) {
+      text-align: left;
+    }
+  }
+
+  &__btn {
+
+    &,
+    &:link,
+    :visited {
+      grid-row: 1/3;
+      grid-column: 3/4;
+      
+      position: relative;
+      outline: none;
+      width: 17.4rem;
+      height: 4.5rem;
+      margin: 3rem;
+      background-color: white;
+      border: 0.2rem solid $dirty-gold;
+      
+      font-family: $RBC-display;
+      font-size: 1.6rem;
+      
+      align-self: center;
+      transition: all, .2s; 
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($blue-grey, 0.2);
+      }
+
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 174px;
+      height: 45px;
+      font-size: 16px;
+    }
+    
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 30px;
+    }
+  }
+  
+}
+
+.feature:last-child {
+  border-bottom: none;
+
+}

@@ -1,0 +1,21 @@
+/* _______________________________________Font Set up_______________________________________ */
+
+@font-face {
+  font-family: 'RBCDisplayRegular';
+  src: url('https://res.cloudinary.com/djot2xc6w/raw/upload/v1605170709/rbc-live/src/fonts/RBCDisplayRegular_fepxel.eot');
+  src: url('https://res.cloudinary.com/djot2xc6w/raw/upload/v1605170709/rbc-live/src/fonts/RBCDisplayRegular_fepxel.eot') format('embedded-opentype'),
+       url('https://res.cloudinary.com/djot2xc6w/raw/upload/v1605170709/rbc-live/src/fonts/RBCDisplayRegular_vqncfn.woff2') format('woff2'),
+       url('https://res.cloudinary.com/djot2xc6w/raw/upload/v1605170709/rbc-live/src/fonts/RBCDisplay-Regular_nn0oba.woff') format('woff'),
+       url('https://res.cloudinary.com/djot2xc6w/raw/upload/v1605170709/rbc-live/src/fonts/RBCDisplayRegular_ufpoiq.ttf') format('truetype'),
+       url('../src/fonts/RBCDisplayRegular.svg#RBCDisplayRegular') format('svg');
+  }
+
+@font-face {
+  font-family: 'RobotoRegular';
+  src: url('https://res.cloudinary.com/djot2xc6w/raw/upload/v1605170708/rbc-live/src/fonts/RobotoRegular_xelyss.eot');
+  src: url('https://res.cloudinary.com/djot2xc6w/raw/upload/v1605170708/rbc-live/src/fonts/RobotoRegular_xelyss.eot') format('embedded-opentype'),
+      url('https://res.cloudinary.com/djot2xc6w/raw/upload/v1605170708/rbc-live/src/fonts/RobotoRegular_vsdvtk.woff2') format('woff2'),
+      url('https://res.cloudinary.com/djot2xc6w/raw/upload/v1605170707/rbc-live/src/fonts/Roboto-Regular_yzplb3.woff') format('woff'),
+      url('https://res.cloudinary.com/djot2xc6w/raw/upload/v1605170708/rbc-live/src/fonts/RobotoRegular_lszyae.ttf') format('truetype'),
+      url('../src/fonts/RobotoRegular.svg#RobotoRegular') format('svg');
+}

@@ -1,0 +1,70 @@
+.cta {
+  grid-row: 4/5;
+  
+  background-image: linear-gradient(rgba(111, 111, 111, 0.5), rgba(111, 111, 111, 0.5)), url("https://res.cloudinary.com/djot2xc6w/image/upload/v1605170708/rbc-live/src/Images/Rectangle29_j7hsei.jpg");
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  padding: $section-padding;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: $mb-section-padding;
+  }
+  
+  @media only screen and (max-width: $bp-small) {
+    display: block;
+  }
+
+  &__definition {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+
+    font-family: $RBC-display;
+    font-size: $mdlarge;
+    line-height: 3.78rem;
+    color: $off-white;
+    text-align: right;
+    align-self: center;
+
+    margin-right: 3rem;
+    
+    @media only screen and (max-width: $bp-small) {
+      font-size: 28px;
+      line-height: 37px;
+      text-align: left;
+    }
+  }
+
+  &__content {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    color: $off-white;
+    margin-left: 3rem;
+    align-self: center;
+
+    @media only screen and (max-width: $bp-small) {
+      line-height: 24px;
+      margin: 0;
+    }
+  }
+
+  &__divider {
+    background-color: $dirty-gold;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    height: 10rem;
+    width: 2px;
+    align-self: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 100px;
+    }
+    
+    @media only screen and (max-width: $bp-small) {
+      transform: rotate(90deg);
+      height: 109px;
+      margin-left: 10rem;
+    }
+  }
+}

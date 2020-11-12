@@ -1,0 +1,40 @@
+.link-highlight {
+  
+  &:link,
+  &:visited {
+    font-family: $RBC-roboto;
+    font-size: inherit;
+    text-decoration: underline;
+    color: $dirty-gold;
+    
+    transition: all .2s;
+    overflow: hidden;
+  
+    &:hover,
+    &:active {
+      background-color: $dirty-gold;
+      padding: 0.2rem 0.4rem;
+      color: $black;
+      transform: translateY(-0.1rem);
+    }
+  }
+}
+
+em {
+  text-emphasis: none;
+}
+
+a {
+  font-style: $RBC-roboto;
+  text-decoration: none;
+}
+
+.footer-nav a {
+  color: $black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+

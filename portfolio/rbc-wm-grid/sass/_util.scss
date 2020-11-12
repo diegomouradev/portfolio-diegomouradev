@@ -1,0 +1,25 @@
+.util {
+
+  &__ruler {
+    width: 17.5rem;
+    height: 2px; // use pixel instead of rems to keep same size when media queries get applied
+    background-color: $dirty-gold;
+    margin-bottom: 3rem;
+    justify-self: end;
+
+    &--footer {
+      width: 2px;
+      height: 100%; // use pixel instead of rems to keep same size when media queries get applied
+      background-color: $dirty-gold;
+      justify-self: center;
+    }
+  }
+
+  &__margin-bottom {
+    margin-bottom: 3rem;
+
+    &-MD {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

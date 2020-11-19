@@ -1,10 +1,10 @@
 {
   "name": "diegomoura.dev",
   "version": "1.0.0",
-  "description": "personal portfolio website",
+  "description": "Diego's Portfolio",
   "main": "index.js",
   "scripts": {
-    "compile:sass": node-sass sass/main.scss css/style.css" -w
+    "watch:sass": "sass sass/main.scss css/styles.dev.css --watch"
   },
   "repository": {
     "type": "git",
@@ -14,12 +14,12 @@
     "portfolio"
   ],
   "author": "Diego Moura",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/diegomouradev/diegomouradev-website/issues"
   },
   "homepage": "https://github.com/diegomouradev/diegomouradev-website#readme",
   "devDependencies": {
-    "node-sass": "^4.14.0"
+    "sass": "^1.29.0"
   }
 }

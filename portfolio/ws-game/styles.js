@@ -44,7 +44,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, "/* You can add global styles to this file, and also import other style files */\nhtml {\n  font-size: 62.5%;\n}\nbody {\n  background-color: #FFFFFF;\n}", "",{"version":3,"sources":["webpack://src/styles.scss"],"names":[],"mappings":"AAOA,8EAAA;AACA;EACE,gBAAA;AANF;AASA;EACE,yBAXM;AAKR","sourcesContent":["// Variables\n$black: #000000;\n$white: #FFFFFF;\n$dark-grey: #333333;\n$medium-grey: #5e5e5e;\n$light-grey: #aaaaaa;\n\n/* You can add global styles to this file, and also import other style files */\nhtml {\n  font-size: 62.5%; // 1rem = 10px\n}\n\nbody {\n  background-color:$white;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, "/* You can add global styles to this file, and also import other style files */\nhtml {\n  font-size: 62.5%;\n}\nbody {\n  background-color: #dcdcdd;\n}", "",{"version":3,"sources":["webpack://src/styles.scss"],"names":[],"mappings":"AAAA,8EAAA;AACA;EACE,gBAAA;AACF;AAEA;EACE,yBAAA;AACF","sourcesContent":["/* You can add global styles to this file, and also import other style files */\nhtml {\n  font-size: 62.5%; // 1rem = 10px\n}\n\nbody {\n  background-color: #dcdcdd;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 

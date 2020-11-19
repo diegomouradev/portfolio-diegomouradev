@@ -51,54 +51,33 @@ const environment = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TileComponent", function() { return TileComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "ofXK");
 
 
-
-const _c0 = function (a0) { return { "grid__tile--selected": a0 }; };
-const _c1 = function (a0) { return { "is-word": a0 }; };
 class TileComponent {
     constructor() {
-        this.onTileSelected = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
     ngOnInit() {
-    }
-    toggleTile() {
-        if (this.tile.isSelected && typeof this.tile.letterPosition !== 'number' && this.tile.isWord) {
-            this.tile.isSelected = this.tile.isSelected;
-        }
-        else {
-            this.tile.isSelected = !this.tile.isSelected;
-        }
-        this.onTileSelected.emit(this.tile);
+        const letter = this.tile.letter;
     }
 }
 TileComponent.ɵfac = function TileComponent_Factory(t) { return new (t || TileComponent)(); };
-TileComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: TileComponent, selectors: [["grid-tile"]], inputs: { tile: "tile" }, outputs: { onTileSelected: "onTileSelected" }, decls: 3, vars: 7, consts: [[1, "grid__tile", 3, "ngClass", "click"], [1, "tile__content", 3, "ngClass"]], template: function TileComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function TileComponent_Template_div_click_0_listener() { return ctx.toggleTile(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+TileComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: TileComponent, selectors: [["app-tile"]], inputs: { tile: "tile" }, decls: 2, vars: 1, consts: [[1, "tile__content"]], template: function TileComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](3, _c0, ctx.tile.isSelected));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](5, _c1, ctx.tile.isWord));
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx.tile.letter, " ");
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"]], styles: ["html[_ngcontent-%COMP%] {\n  font-size: 62.5%;\n}\nbody[_ngcontent-%COMP%] {\n  background-color: #FFFFFF;\n}\n.grid__tile[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 3rem;\n  height: 3rem;\n  padding: 0.2rem 0.1rem 0.2rem 0.2rem;\n  margin: 0rem;\n  border: 0.1rem solid #5e5e5e;\n  background-color: #aaaaaa;\n  transition: all 0.2s ease-in-out;\n}\n.grid__tile--selected[_ngcontent-%COMP%] {\n  background-color: #5e5e5e;\n  border-color: #333333;\n}\n.grid__tile[_ngcontent-%COMP%]:hover {\n  background-color: #5e5e5e;\n  border: 0.1rem solid #333333;\n  transform: scale(110%);\n}\n.tile__content[_ngcontent-%COMP%] {\n  text-transform: uppercase;\n  font-family: sans-serif;\n  font-size: 2rem;\n  color: #000000;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuc2NzcyIsInNyYy9hcHAvdGlsZS90aWxlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQU9BLDhFQUFBO0FBQ0E7RUFDRSxnQkFBQTtBQ05GO0FEU0E7RUFDRSx5QkFYTTtBQ0tSO0FBSEU7RUFDRSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0VBQ0Esb0NBQUE7RUFDQSxZQUFBO0VBRUEsNEJBQUE7RUFDQSx5QkRUUztFQ1VULGdDQUFBO0FBS0o7QUFISTtFQUNFLHlCRGRRO0VDZVIscUJEaEJNO0FDcUJaO0FBRkk7RUFDRSx5QkRuQlE7RUNvQlIsNEJBQUE7RUFDQSxzQkFBQTtBQUlOO0FBR0U7RUFDRSx5QkFBQTtFQUNBLHVCQUFBO0VBQ0EsZUFBQTtFQUNBLGNEbkNJO0FDbUNSIiwiZmlsZSI6InNyYy9hcHAvdGlsZS90aWxlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gVmFyaWFibGVzXG4kYmxhY2s6ICMwMDAwMDA7XG4kd2hpdGU6ICNGRkZGRkY7XG4kZGFyay1ncmV5OiAjMzMzMzMzO1xuJG1lZGl1bS1ncmV5OiAjNWU1ZTVlO1xuJGxpZ2h0LWdyZXk6ICNhYWFhYWE7XG5cbi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbmh0bWwge1xuICBmb250LXNpemU6IDYyLjUlOyAvLyAxcmVtID0gMTBweFxufVxuXG5ib2R5IHtcbiAgYmFja2dyb3VuZC1jb2xvcjokd2hpdGU7XG59IiwiQGltcG9ydCAnL3NyYy9zdHlsZXMuc2Nzcyc7XG5cbi5ncmlkIHtcblxuICAmX190aWxlIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgd2lkdGg6IDNyZW07XG4gICAgaGVpZ2h0OiAzcmVtO1xuICAgIHBhZGRpbmc6IDAuMnJlbSAwLjFyZW0gMC4ycmVtIDAuMnJlbTtcbiAgICBtYXJnaW46IDByZW07XG4gICAgXG4gICAgYm9yZGVyOiAwLjFyZW0gc29saWQgJG1lZGl1bS1ncmV5O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICRsaWdodC1ncmV5O1xuICAgIHRyYW5zaXRpb246IGFsbCAuMnMgZWFzZS1pbi1vdXQ7XG5cbiAgICAmLS1zZWxlY3RlZCB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkbWVkaXVtLWdyZXk7XG4gICAgICBib3JkZXItY29sb3I6ICRkYXJrLWdyZXk7XG4gICAgfVxuXG4gICAgJjpob3ZlcntcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICAkbWVkaXVtLWdyZXk7XG4gICAgICBib3JkZXI6IDAuMXJlbSBzb2xpZCAkZGFyay1ncmV5O1xuICAgICAgdHJhbnNmb3JtOiBzY2FsZSgxMTAlKTtcbiAgICB9XG4gIH1cbn1cblxuLnRpbGUge1xuXG4gICZfX2NvbnRlbnQge1xuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gICAgZm9udC1zaXplOiAycmVtO1xuICAgIGNvbG9yOiAkYmxhY2s7XG4gIH1cbn0iXX0= */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx.tile.letter);
+    } }, styles: [".tile__content[_ngcontent-%COMP%] {\n  color: black;\n  font-size: 3rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGlsZS90aWxlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVFO0VBQ0UsWUFBQTtFQUNBLGVBQUE7QUFESiIsImZpbGUiOiJzcmMvYXBwL3RpbGUvdGlsZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi50aWxlIHtcblxuICAmX19jb250ZW50IHtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgZm9udC1zaXplOiAzcmVtO1xuICB9XG59Il19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TileComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
-                selector: 'grid-tile',
+                selector: 'app-tile',
                 templateUrl: './tile.component.html',
                 styleUrls: ['./tile.component.scss']
             }]
     }], function () { return []; }, { tile: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
-        }], onTileSelected: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }] }); })();
 
 
@@ -118,8 +97,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "l207");
 /* harmony import */ var _board_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../board.service */ "VXsB");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _tile_tile_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../tile/tile.component */ "H9aC");
-
 
 
 
@@ -127,20 +104,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function GridComponent_div_0_div_1_Template(rf, ctx) { if (rf & 1) {
-    const _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "grid-tile", 3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("onTileSelected", function GridComponent_div_0_div_1_Template_grid_tile_onTileSelected_1_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5); const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r4.checkForWord($event); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const tile_r3 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("tile", tile_r3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](tile_r3.letter);
 } }
 function GridComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridComponent_div_0_div_1_Template, 2, 1, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, GridComponent_div_0_div_1_Template, 3, 1, "div", 2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const row_r1 = ctx.$implicit;
@@ -150,40 +126,18 @@ function GridComponent_div_0_Template(rf, ctx) { if (rf & 1) {
 class GridComponent {
     constructor(BoardService) {
         this.BoardService = BoardService;
-        this.word = [];
-        this.wordList = _constants__WEBPACK_IMPORTED_MODULE_1__["WORD_LIST"];
     }
+    /* testing */
     ngOnInit() {
         this.gameGrid = this.BoardService.generateBoard(_constants__WEBPACK_IMPORTED_MODULE_1__["GRID_SIZE"], _constants__WEBPACK_IMPORTED_MODULE_1__["WORD_LIST"]);
     }
-    checkForWord($event) {
-        if ($event.isWord) {
-            if ($event.letterPosition.length && this.word.length === $event.letterPosition[0]) {
-                this.word[$event.letterPosition[0]] = $event.letter;
-            }
-            else if ($event.letterPosition.length && this.word.length === $event.letterPosition[1]) {
-                this.word[$event.letterPosition[1]] = $event.letter;
-            }
-            else {
-                this.word[$event.letterPosition] = $event.letter;
-            }
-            const wordToCheck = this.word.join('');
-            for (let [i, word] of this.wordList.entries()) {
-                if (wordToCheck === word) {
-                    alert(`You caught a wild ${word}`);
-                    console.log(`You caught a wild ${word}`);
-                    this.word = [];
-                }
-            }
-        }
-    }
 }
 GridComponent.ɵfac = function GridComponent_Factory(t) { return new (t || GridComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_board_service__WEBPACK_IMPORTED_MODULE_2__["BoardService"])); };
-GridComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GridComponent, selectors: [["app-grid"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([_board_service__WEBPACK_IMPORTED_MODULE_2__["BoardService"]])], decls: 1, vars: 1, consts: [["class", "grid__row", 4, "ngFor", "ngForOf"], [1, "grid__row"], [4, "ngFor", "ngForOf"], [3, "tile", "onTileSelected"]], template: function GridComponent_Template(rf, ctx) { if (rf & 1) {
+GridComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GridComponent, selectors: [["app-grid"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([_board_service__WEBPACK_IMPORTED_MODULE_2__["BoardService"]])], decls: 1, vars: 1, consts: [["class", "grid__row", 4, "ngFor", "ngForOf"], [1, "grid__row"], ["class", "grid__tile", 4, "ngFor", "ngForOf"], [1, "grid__tile"], [1, "grid__tile--content"]], template: function GridComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, GridComponent_div_0_Template, 2, 1, "div", 0);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.gameGrid);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _tile_tile_component__WEBPACK_IMPORTED_MODULE_4__["TileComponent"]], styles: [".grid__row[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JpZC9ncmlkLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdFO0VBQ0UsYUFBQTtFQUNBLGlCQUFBO0VBQ0EsdUJBQUE7QUFGSiIsImZpbGUiOiJzcmMvYXBwL2dyaWQvZ3JpZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ncmlkIHtcbiBcblxuICAmX19yb3cge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC13cmFwOiBub3dyYXA7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIH1cbn1cbiJdfQ== */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"]], styles: [".grid__row[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: center;\n}\n.grid__tile[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n  width: 3rem;\n  height: 3rem;\n  padding: 0.2rem 0.1rem 0.2rem 0.2rem;\n  margin: 0.1rem;\n  border: 0.1rem solid #eaf8bf;\n  background-color: #eca400;\n  transition: all 0.2s ease-in-out;\n}\n.grid__tile[_ngcontent-%COMP%]:hover {\n  background-color: #eaf8bf;\n  border: 0.1rem solid #eca400;\n  transform: scale(110%);\n}\n.grid__tile--content[_ngcontent-%COMP%] {\n  text-transform: uppercase;\n  font-family: sans-serif;\n  font-size: 2rem;\n  color: #001d4a;\n  text-shadow: 0.1rem 0.1rem 0.1rem #27476e;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JpZC9ncmlkLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVFO0VBQ0UsYUFBQTtFQUNBLGlCQUFBO0VBQ0EsdUJBQUE7QUFESjtBQUlFO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0VBQ0EscUJBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLG9DQUFBO0VBQ0EsY0FBQTtFQUNBLDRCQUFBO0VBQ0EseUJBQUE7RUFDQSxnQ0FBQTtBQUZKO0FBSUk7RUFDRSx5QkFBQTtFQUNBLDRCQUFBO0VBQ0Esc0JBQUE7QUFGTjtBQUtJO0VBQ0UseUJBQUE7RUFDQSx1QkFBQTtFQUNBLGVBQUE7RUFDQSxjQUFBO0VBQ0EseUNBQUE7QUFITiIsImZpbGUiOiJzcmMvYXBwL2dyaWQvZ3JpZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ncmlkIHtcblxuICAmX19yb3cge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC13cmFwOiBub3dyYXA7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIH1cblxuICAmX190aWxlIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBmbGV4LWVuZDtcbiAgICB3aWR0aDogM3JlbTtcbiAgICBoZWlnaHQ6IDNyZW07XG4gICAgcGFkZGluZzogMC4ycmVtIDAuMXJlbSAwLjJyZW0gMC4ycmVtO1xuICAgIG1hcmdpbjogMC4xcmVtO1xuICAgIGJvcmRlcjogMC4xcmVtIHNvbGlkICNlYWY4YmY7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2VjYTQwMDtcbiAgICB0cmFuc2l0aW9uOiBhbGwgLjJzIGVhc2UtaW4tb3V0O1xuXG4gICAgJjpob3ZlcntcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICAjZWFmOGJmO1xuICAgICAgYm9yZGVyOiAwLjFyZW0gc29saWQgI2VjYTQwMDtcbiAgICAgIHRyYW5zZm9ybTogc2NhbGUoMTEwJSk7XG4gICAgfVxuXG4gICAgJi0tY29udGVudCB7XG4gICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICAgICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gICAgICBmb250LXNpemU6IDJyZW07XG4gICAgICBjb2xvcjogIzAwMWQ0YTtcbiAgICAgIHRleHQtc2hhZG93OiAwLjFyZW0gMC4xcmVtIDAuMXJlbSAjMjc0NzZlO1xuICAgIH1cblxuICB9XG5cbn0iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](GridComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -214,7 +168,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class AppComponent {
     constructor() {
-        this.title = 'Pokemon Catcher';
+        this.title = 'Word Search Game';
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
@@ -396,7 +350,6 @@ class FillGridService {
         this.gridHeight = _constants__WEBPACK_IMPORTED_MODULE_1__["GRID_HEIGHT"];
         this.gridSize = _constants__WEBPACK_IMPORTED_MODULE_1__["GRID_SIZE"];
         this.directions = _constants__WEBPACK_IMPORTED_MODULE_1__["DIRECTIONS"];
-        this.wordCounter = 0;
         // Given the direction calculates the next Square.
         this.nextTile = {
             horizontal: (indexColumn, indexRow, distance) => ({ indexColumn: indexColumn + distance, indexRow }),
@@ -421,7 +374,6 @@ class FillGridService {
         this.gridSize = gridSize;
         this.generateGrid();
         this.placeWord();
-        this.fillEmptySpots();
         return this.grid;
     }
     // Generate grid of empty tiles.
@@ -429,21 +381,19 @@ class FillGridService {
         for (let i = 0; i < this.gridHeight; i++) {
             this.grid.push([]);
             for (let j = 0; j < this.gridWidth; j++) {
-                this.grid[i].push({ letter: '_', isWord: false });
+                this.grid[i].push({ letter: '_' });
             }
         }
     }
-    getWord() {
-        let sortedWords = this.words.sort((a, b) => b.length - a.length);
-        let getOneWord = sortedWords[this.wordCounter];
-        this.wordCounter++;
-        return getOneWord;
+    pickRandomWord() {
+        let length = this.words.length;
+        let randomWord = this.words.splice((Math.floor(Math.random() * length)), 1);
+        return randomWord[0];
     }
     // Find all available locations to place the word in every direction.
     getAvailableLocations(word) {
         const locations = [];
         const wordLength = word.length;
-        let biggestOverlap = 0;
         for (let j = 0; j < this.directions.length; j++) {
             const direction = this.directions[j];
             const checkDirection = this.isDirectionValid[direction];
@@ -454,10 +404,9 @@ class FillGridService {
                 // check if the word fits in the space available at all.
                 if (checkDirection(this.gridWidth, this.gridHeight, indexColumn, indexRow, wordLength)) {
                     // If it fits, check the next tile for the length of the word to make sure words don't overlap.
-                    let overlap = this.checkForOverlap(word, indexColumn, indexRow, nextTile);
-                    if (overlap >= biggestOverlap || overlap === 0) {
-                        biggestOverlap = overlap;
-                        locations.push({ indexColumn, indexRow, direction, overlap: biggestOverlap });
+                    let isOverlap = this.checkForOverlap(word, indexColumn, indexRow, nextTile);
+                    if (isOverlap === 0) {
+                        locations.push({ indexColumn, indexRow, direction });
                     }
                     indexColumn++;
                     if (indexColumn >= this.gridWidth) {
@@ -473,7 +422,7 @@ class FillGridService {
                 }
             }
         }
-        return this.optimizeOverlaps(locations, biggestOverlap);
+        return locations;
     }
     ;
     checkForOverlap(word, indexColumn, indexRow, getNextTile) {
@@ -481,32 +430,25 @@ class FillGridService {
         for (let k = 0; k < word.length; k++) {
             let nextTile = getNextTile(indexColumn, indexRow, k);
             let tile = this.grid[nextTile.indexRow][nextTile.indexColumn];
-            if (tile.letter === word[k]) {
-                overlap++;
+            if (tile.letter === '_') {
+                overlap = overlap;
             }
-            else if (tile.letter !== '_') {
-                return -1;
+            else {
+                overlap--;
             }
         }
         return overlap;
     }
-    optimizeOverlaps(locations, biggestOverlap) {
-        let overlapLocations = [];
-        for (let [i, location] of locations.entries()) {
-            if (location.overlap >= biggestOverlap) {
-                overlapLocations.push(location);
-            }
-        }
-        return overlapLocations;
-    }
     placeWord() {
-        let length = this.words.length;
-        while (length) {
-            const word = this.getWord();
+        while (this.words.length >= 1) {
+            // get random word to place in the grid.
+            const word = this.pickRandomWord();
+            // get all available locations for placing the word.
             const locations = this.getAvailableLocations(word);
+            // select available locations at random.
             const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+            // place word in the selected location.
             this.placeWordInGrid(word, randomLocation);
-            length--;
         }
         return this.grid;
     }
@@ -514,53 +456,17 @@ class FillGridService {
         for (let i = 0, length = word.length; i < length; i++) {
             let next = this.nextTile[randomLocation.direction];
             next = next(randomLocation.indexColumn, randomLocation.indexRow, i);
-            let tile = this.buildTile(word, next, i);
+            let tile = {
+                letter: word[i],
+                indexRow: next.indexRow,
+                indexColumn: next.indexColumn,
+                isWord: true,
+                isSelected: false
+            };
             this.grid[next.indexRow][next.indexColumn] = tile;
         }
     }
     ;
-    buildTile(word, next, i) {
-        if (this.grid[next.indexRow][next.indexColumn].letter === word[i]) {
-            let previousLetterPosition = this.grid[next.indexRow][next.indexColumn].letterPosition;
-            const tile = {
-                letter: word[i],
-                indexRow: next.indexRow,
-                indexColumn: next.indexColumn,
-                isWord: true,
-                isSelected: false,
-                letterPosition: [previousLetterPosition, i]
-            };
-            return tile;
-        }
-        else {
-            const tile = {
-                letter: word[i],
-                indexRow: next.indexRow,
-                indexColumn: next.indexColumn,
-                isWord: true,
-                isSelected: false,
-                letterPosition: i
-            };
-            return tile;
-        }
-    }
-    fillEmptySpots() {
-        for (let row of this.grid) {
-            let i = 0;
-            while (i < this.gridWidth) {
-                if (row[i].letter === "_") {
-                    row[i].letter = this.pickRandomLetter();
-                }
-                i++;
-            }
-        }
-    }
-    ;
-    pickRandomLetter() {
-        const letterIndex = Math.floor(Math.random() * this.alphabet.length);
-        const randomLetter = this.alphabet[letterIndex];
-        return randomLetter;
-    }
 }
 FillGridService.ɵfac = function FillGridService_Factory(t) { return new (t || FillGridService)(); };
 FillGridService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: FillGridService, factory: FillGridService.ɵfac, providedIn: 'root' });

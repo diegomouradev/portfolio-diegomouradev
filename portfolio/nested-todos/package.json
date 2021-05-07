@@ -16,6 +16,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.20",
-    "underscore": "^1.11.0"
+    "underscore": "^1.12.1"
   }
 }

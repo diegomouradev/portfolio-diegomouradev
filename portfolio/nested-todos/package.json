@@ -15,7 +15,7 @@
     "node-sass": "^4.14.1"
   },
   "dependencies": {
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "underscore": "^1.11.0"
   }
 }

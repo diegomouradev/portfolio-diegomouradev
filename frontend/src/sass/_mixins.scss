@@ -23,8 +23,8 @@
     }
   }
 
-  @if $breakpoint == wid-1800-more {
-    @media (min-width: 112.5em) {
+  @if $breakpoint == wid-1500-more {
+    @media (min-width: 93.75em) {
       @content;
     }
   }

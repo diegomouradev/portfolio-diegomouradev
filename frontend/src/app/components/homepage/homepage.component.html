@@ -1,2 +1,40 @@
-<section class="col-left"></section>
-<section class="col-right"></section>
+<main class="main-grid">
+  <section class="left">
+    <img
+      class="img main-title"
+      src="https://res.cloudinary.com/djot2xc6w/image/upload/v1634652607/diegomouradev/images/diegomoura-home.webp"
+      alt="diego moura"
+      [ngClass]="animationOn ? 'slide-in-left' : ''"
+    />
+
+    <img
+      class="main-photo"
+      src="https://res.cloudinary.com/djot2xc6w/image/upload/v1634652609/diegomouradev/images/diego-main-picture.webp"
+      alt="diego moura"
+      [ngClass]="animationOn ? 'fade-in' : ''"
+    />
+  </section>
+  <section class="right">
+    <p class="intro-text">
+      I am a Front-End developer who specializes in responsive and accessible
+      web applications. Skills and experience include <span>HTML5</span>,
+      <span>CSS3</span> and vanilla <span>Javascript</span>, along with
+      <span>Angular2</span> and <span>React</span>. I'm also adept in current
+      web technologies such as <span>Git</span>, CSS pre-processors like
+      <span>Sass</span>, <span>Bootstrap</span>, restful <span>APIs</span>, and
+      unit-testing libraries. To support my front-end skillset, I've also
+      acquired a solid foundation in back-end development using
+      <span>NodeJs</span>, <span>Django</span>, and <span>MongoDB</span> - I
+      find that full coverage across the stack enables me to go the extra mile
+      when creating and problem solving.
+    </p>
+    <div class="sub-title-wrapper">
+      <img
+        class="img sub-title"
+        src="https://res.cloudinary.com/djot2xc6w/image/upload/v1634652608/diegomouradev/images/frontend-home.webp"
+        alt="front-end"
+        [ngClass]="animationOn ? 'slide-in-right' : ''"
+      />
+    </div>
+  </section>
+</main>

@@ -1,0 +1,44 @@
+@import "./sass/variables.scss";
+@import "./sass/mixins.scss";
+@import "./sass/animations.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: unset;
+  outline: unset;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1 rem == 10px
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.img {
+  width: 100%;
+}

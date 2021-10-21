@@ -35,7 +35,7 @@
 }
 
 .main-photo {
-  width: 80%;
+  max-width: 70%;
   filter: grayscale(100%);
   grid-column: 1/2;
   grid-row: 1/2;
@@ -74,7 +74,7 @@
   grid-column: 1/2;
   grid-row: 1/3;
   font-weight: 400;
-  color: #79797c;
+  color: $black;
   line-height: 1.2;
   padding: 50px;
   text-align: right;

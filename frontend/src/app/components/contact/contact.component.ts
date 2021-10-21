@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactForm } from 'src/app/models/contact-form';
+import { EmailService } from 'src/app/services/email.service';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -7,7 +8,7 @@ import { ContactForm } from 'src/app/models/contact-form';
 })
 export class ContactComponent implements OnInit {
   form = { name: '', email: '', message: '' };
-  constructor() {}
+  constructor(private emailService: EmailService) {}
 
   ngOnInit(): void {}
 

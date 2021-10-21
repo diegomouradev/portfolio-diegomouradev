@@ -24,7 +24,12 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": ["src/favicon.ico", "src/assets", "src/_redirects"],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.scss",
+              "src/sass/_variables.scss",
+              "src/sass/_mixins.scss",
+              "src/sass/_animations.scss"
+            ],
             "scripts": []
           },
           "configurations": {

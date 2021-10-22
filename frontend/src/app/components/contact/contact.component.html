@@ -9,16 +9,12 @@
     <img src="../../../assets/images/contact-title.png" alt="" />
   </section>
   <section class="right">
-    <form
-      class="contact-form"
-      #myForm="ngForm"
-      (ngSubmit)="onFormSubmit($event)"
-    >
+    <form class="contact-form" #myForm="ngForm" (ngSubmit)="onFormSubmit()">
       <div class="input-wrapper">
         <input
           id="name-input"
           type="text"
-          [(ngModel)]="form.name"
+          [(ngModel)]="formData.name"
           name="name"
           placeholder="Your name"
           required
@@ -34,7 +30,7 @@
         <input
           type="email"
           id="email-input"
-          [(ngModel)]="form.email"
+          [(ngModel)]="formData.email"
           name="email"
           placeholder="Your e-mail"
           required
@@ -52,7 +48,7 @@
       <div class="input-wrapper">
         <textarea
           id="message-input"
-          [(ngModel)]="form.message"
+          [(ngModel)]="formData.message"
           name="message"
           placeholder="Hey! What's up?"
           required

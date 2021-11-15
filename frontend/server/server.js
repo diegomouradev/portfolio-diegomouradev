@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 4000;
 
 const app = express();
 var corsOptions = {
-  origin: "http://localhost:4200",
+  origin: "https://diegomoura.dev",
 };
 app.use(cors(corsOptions));
 app.use(express.json());
@@ -20,6 +20,6 @@ app.use("/", express.static(path.resolve(__dirname, "../dist/portfolio")));
 
 app.use("/api/email", emailRoutes);
 
-app.listen(PORT, () =>
-  console.log(`App running on http://localhost:${PORT}${CONTEXT}`)
-);
+// app.listen(PORT, () =>
+//   console.log(`App running on http://localhost:${PORT}${CONTEXT}`)
+// );

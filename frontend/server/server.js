@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 4000;
 
 const app = express();
 var corsOptions = {
-  origin: "http://localhost:4200",
+  origin: "https://diegomoura.dev",
 };
 app.use(cors(corsOptions));
 app.use(express.json());

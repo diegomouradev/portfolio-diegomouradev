@@ -20,10 +20,6 @@ export class EmailService {
   constructor(private http: HttpClient) {}
 
   sedEmail(formData): Observable<any> {
-    return this.http.post(
-      `${environment.apiUrl}${this.sendEmailApi}`,
-      formData,
-      this.httpOptions
-    );
+    return this.http.post(`${this.BASE_URL_DEV}`, formData, this.httpOptions);
   }
 }

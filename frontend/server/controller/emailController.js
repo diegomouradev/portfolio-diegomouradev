@@ -1,36 +1,47 @@
+const dotEnv = require("dotenv");
+const mailjet = require("node-mailjet").connect(
+  `${process.env.MJ_APIKEY_PUBLIC}`,
+  `${process.env.MJ_APIKEY_PRIVATE}`
+);
 exports.sendEmail = async (req, res, next) => {
-  const newEmail = req.body;
-
-  res.status(201).json({
-    status: "success",
-    data: {
-      email: newEmail,
-    },
+  const send = mailjet.post("send", { version: "v3.1" }).request({
+    Messages: [
+      {
+        From: {
+          Email: "diegoo.demoura@gmail.com",
+          Name: "Diego",
+        },
+        To: [
+          {
+            Email: "diegoo.demoura@gmail.com",
+            Name: "Diego",
+          },
+        ],
+        Variables: {
+          name: `${req.body.name}`,
+          email: `${req.body.email}`,
+          message: `${req.body.message}`,
+        },
+        TemplateLanguage: true,
+        Subject: "Test1",
+        TextPart: "{{var:email}}",
+        HTMLPart: `
+        
+        <p>{{var:email}}</p>
+        <p>{{var:name}}</p>
+        <p>{{var:message}}</p>
+        `,
+      },
+    ],
   });
-  //   const request = mailjet.post("send", { version: "v3.1" }).request({
-  //     Messages: [
-  //       {
-  //         From: {
-  //           Email: "diegoo.demoura@gmail.com",
-  //           Name: "Me",
-  //         },
-  //         To: [
-  //           {
-  //             Email: "diegoo.demoura@gmail.com",
-  //             Name: "You",
-  //           },
-  //         ],
-  //         Subject: "test 1",
-  //         TextPart: "Greetings from Mailjet!",
-  //         HTMLPart: `${eventString}`,
-  //       },
-  //     ],
-  //   });
-  //   request
-  //     .then((result) => {
-  //       console.log(result.body);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err.statusCode);
-  //     });
+  send
+    .then((result) => {
+      res.json({
+        result,
+      });
+    })
+    .catch((err) => {
+      console.log(err.statusCode);
+      console.log(err);
+    });
 };

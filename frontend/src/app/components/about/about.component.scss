@@ -1,0 +1,16 @@
+.main-bg {
+  display: flex;
+  height: 100vh;
+  background: rgb(39, 134, 245);
+  background: linear-gradient(
+    90deg,
+    rgba(39, 134, 245, 1) 0%,
+    rgba(185, 241, 140, 1) 100%
+  );
+  padding: 25vh 25vw;
+}
+
+main-text {
+  align-self: center;
+  justify-self: center;
+}

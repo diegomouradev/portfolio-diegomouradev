@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ContactForm } from 'src/app/models/contact-form';
 import { EmailService } from 'src/app/services/email.service';
 
@@ -15,7 +16,8 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {}
 
   onFormSubmit(): void {
-    let dataStringified = JSON.stringify(this.formData);
-    this.emailService.sedEmail(dataStringified);
+    this.emailService
+      .sedEmail(this.formData)
+      .subscribe((result) => console.log(result));
   }
 }

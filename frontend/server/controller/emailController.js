@@ -1,8 +1,9 @@
-const dotEnv = require("dotenv");
+const dotEnv = require("dotenv").config();
 const mailjet = require("node-mailjet").connect(
   `${process.env.MJ_APIKEY_PUBLIC}`,
   `${process.env.MJ_APIKEY_PRIVATE}`
 );
+
 exports.sendEmail = async (req, res, next) => {
   const send = mailjet.post("send", { version: "v3.1" }).request({
     Messages: [
@@ -23,7 +24,7 @@ exports.sendEmail = async (req, res, next) => {
           message: `${req.body.message}`,
         },
         TemplateLanguage: true,
-        Subject: "Test1",
+        Subject: "diegomoura.dev new message",
         TextPart: "{{var:email}}",
         HTMLPart: `
         

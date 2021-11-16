@@ -16,6 +16,7 @@ app.use(express.json());
 
 app.use(compression());
 app.use(CONTEXT, express.static(path.resolve(__dirname, "../dist/portfolio")));
+app.use(express.static(path.resolve(__dirname, "../dist/portfolio")));
 app.use("/", express.static(path.resolve(__dirname, "../dist/portfolio")));
 
 app.use("/api/email", emailRoutes);

@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 4000;
 
 const app = express();
 var corsOptions = {
-  origin: "https://diegomoura.dev",
+  origin: "https://www.diegomoura.dev",
 };
 app.use(cors(corsOptions));
 app.use(express.json());

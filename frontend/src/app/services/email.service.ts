@@ -7,8 +7,6 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class EmailService {
-  readonly sendEmailApi = '/api/email/send-email';
-  readonly BASE_URL_DEV = 'http://localhost:4000/api/email/send-email';
   readonly BASE_URL_PROD = 'https://diegomoura.dev/api/email/send-email';
 
   httpOptions = {

@@ -19,5 +19,6 @@ export class ContactComponent implements OnInit {
     this.emailService
       .sedEmail(this.formData)
       .subscribe((result) => console.log(result));
+    this.formData = { name: null, email: null, message: null };
   }
 }

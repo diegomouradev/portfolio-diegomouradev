@@ -20,6 +20,6 @@ app.use("/", express.static(path.resolve(__dirname, "../dist/portfolio")));
 
 app.use("/api/email", emailRoutes);
 
-// app.listen(PORT, () =>
-//   console.log(`App running on http://localhost:${PORT}${CONTEXT}`)
-// );
+app.listen(PORT, () =>
+  console.log(`App running on http://localhost:${PORT}${CONTEXT}`)
+);

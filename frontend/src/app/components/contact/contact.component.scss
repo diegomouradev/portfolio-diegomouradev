@@ -1,0 +1,87 @@
+@import "../../../sass/variables.scss";
+@import "../../../sass/mixins";
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 100vh;
+}
+
+.left {
+  background-color: $main-blue;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+}
+
+.right {
+  background-color: $main-green;
+  grid-column: 2/3;
+  display: grid;
+}
+
+.contact-form {
+  height: 100%;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__submit-btn {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}
+
+.input-wrapper {
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.input-wrapper > label {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  transform: translateY(3rem);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus-within ~ label {
+  color: $main-blue;
+  transform: translateY(-3rem);
+  opacity: 1;
+}
+
+input:focus-within::placeholder {
+  color: transparent;
+}
+
+textarea:focus-within ~ label {
+  color: $main-blue;
+  transform: translateY(-3rem);
+  opacity: 1;
+}
+
+textarea:focus-within::placeholder {
+  color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 2rem 3rem;
+  font-family: inherit;
+  border: 0.1rem solid $main-blue;
+  border-radius: 0.3rem;
+  color: $main-blue;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: inherit;
+  color: $main-blue;
+}
+
+.alert {
+  font-weight: 700;
+}

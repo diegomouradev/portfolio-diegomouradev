@@ -1,0 +1,72 @@
+<main class="main-grid">
+  <section class="left">
+    <div class="contact-intro">
+      <h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+        adipisci at esse animi eaque deleniti maxime!
+      </h3>
+    </div>
+    <img src="../../../assets/images/contact-title.png" alt="" />
+  </section>
+  <section class="right">
+    <form class="contact-form" #myForm="ngForm" (ngSubmit)="onFormSubmit()">
+      <div class="input-wrapper">
+        <input
+          id="name-input"
+          type="text"
+          [(ngModel)]="formData.name"
+          name="name"
+          placeholder="Your name"
+          required
+          #name="ngModel"
+        />
+        <label for="name-input">Your name:</label>
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+          <div *ngIf="name.errors?.required">Name is required.</div>
+        </div>
+      </div>
+
+      <div class="input-wrapper">
+        <input
+          type="email"
+          id="email-input"
+          [(ngModel)]="formData.email"
+          name="email"
+          placeholder="Your e-mail"
+          required
+          #email="ngModel"
+        />
+        <label for="email-input" required>Your e-mail:</label>
+        <div
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="alert"
+        >
+          <div *ngIf="email.errors?.required">E-mail is required.</div>
+        </div>
+      </div>
+
+      <div class="input-wrapper">
+        <textarea
+          id="message-input"
+          [(ngModel)]="formData.message"
+          name="message"
+          placeholder="Hey! What's up?"
+          required
+          rows="15"
+          cols="30"
+          required
+          #message="ngModel"
+        ></textarea>
+        <label for="message-input">Sup?</label>
+        <div
+          *ngIf="message.invalid && (message.dirty || message.touched)"
+          class="alert"
+        >
+          <div *ngIf="message.errors?.required">Message is required.</div>
+        </div>
+      </div>
+
+      <input class="contact-form__submit-btn" type="submit" value="send" />
+    </form>
+  </section>
+</main>

@@ -3,26 +3,24 @@
 @import "../../../sass/animations";
 
 .main-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 11rem;
-
   position: absolute;
-  top: -21rem;
+  width: 100%;
+  top: -10rem;
   left: 0;
-
   background-color: $main-blue;
   transition: all 0.2s ease-in-out;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
 
+  @include respond(wid-600) {
+    top: -20rem;
+  }
+
   &__active {
     position: absolute;
     top: 0rem;
-    z-index: 100;
+    z-index: 10;
 
-    @include respond(wid-768) {
+    @include respond(wid-600) {
       width: 100%;
       height: 100%;
 
@@ -35,7 +33,6 @@
 
 .navigation {
   display: grid;
-  width: 100%;
   grid-template-columns: 1fr 0.5fr;
 
   &__links {
@@ -44,9 +41,8 @@
     flex-wrap: nowrap;
 
     justify-content: space-around;
-    align-items: center;
 
-    @include respond(wid-768) {
+    @include respond(wid-600) {
       width: unset;
       flex-wrap: unset;
       flex-direction: column;
@@ -54,10 +50,19 @@
   }
 
   &__link {
+    padding: 1rem 0;
+
+    @include respond(wid-600) {
+      padding: 0;
+    }
     & a {
       color: $main-green;
-      font-size: 3rem;
+      font-size: 1.8rem;
       font-weight: 300;
+
+      @include respond(wid-600) {
+        font-size: 2.4rem;
+      }
 
       &:hover {
         text-decoration: underline;
@@ -70,36 +75,41 @@
       reverse both;
     animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
 
-    @include respond(wid-768) {
+    @include respond(wid-600) {
       display: block;
       grid-template-columns: unset;
     }
   }
 
   &__toggle {
-    position: absolute;
-    top: 3rem;
-    right: 3rem;
-
     width: 5rem;
     height: 5rem;
-
     font-size: 3rem;
-
-    background-color: $main-grey;
-    border-radius: 100%;
-    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.5);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 0.2rem;
+    right: 1rem;
     cursor: pointer;
-    z-index: 200;
+    z-index: 20;
+
+    @include respond(wid-600) {
+      top: 1rem;
+      right: 1rem;
+      width: 5rem;
+      height: 5rem;
+      background-color: $main-grey;
+      border-radius: 100%;
+      box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
 .main-header__active ~ .navigation__toggle {
-  background-color: $main-green;
+  @include respond(wid-600) {
+    background-color: $main-blue;
+  }
 }
 
 .navigation__link a.active {
@@ -115,11 +125,19 @@
   }
 
   &__link {
+    padding: 1rem;
     & a {
       color: $main-green;
-      font-size: 3rem;
+      font-size: 1.8rem;
       font-weight: 300;
-      margin-right: 2rem;
+
+      @include respond(wid-600) {
+        font-size: 2.4rem;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

@@ -22,7 +22,7 @@ import { SafePipe } from './pipes/safe.pipe';
     ContactComponent,
     SafePipe,
   ],
-  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

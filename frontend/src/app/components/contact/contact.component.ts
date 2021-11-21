@@ -9,30 +9,16 @@ import { EmailService } from 'src/app/services/email.service';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  formData = new ContactForm('', '', '');
+  formData = { name: '', email: '', message: '' };
 
   constructor(private emailService: EmailService) {}
 
   ngOnInit(): void {}
 
-  clearField($event): void {
-    switch ($event.name) {
-      case 'name':
-        this.formData.name = '';
-        break;
-      case 'email':
-        this.formData.email = '';
-        break;
-      case 'message':
-        this.formData.email = '';
-        break;
-    }
-  }
   onFormSubmit(): void {
     this.emailService
       .sedEmail(this.formData)
       .subscribe((result) => console.log(result));
-
-    // this.formData = new ContactForm('', '', '');
+    this.formData = { name: null, email: null, message: null };
   }
 }

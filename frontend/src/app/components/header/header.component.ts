@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.toggleColor = {
-      color: this.isNavActive ? '#0b60c1' : '#2786f5',
+      color: this.isNavActive ? '#b9f18c' : '#2786f5',
     };
     this.highlightToggle();
   }
@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
   toggleNav(): void {
     this.isNavActive = !this.isNavActive;
     this.toggleColor = {
-      color: this.isNavActive ? '#0b60c1' : '#2786f5',
+      color: this.isNavActive ? '#b9f18c' : '#2786f5',
     };
   }
 }

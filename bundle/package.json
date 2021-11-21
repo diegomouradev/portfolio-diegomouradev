@@ -2,15 +2,7 @@
   "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve --open",
-    "start:prod": "npm run build:prod && npm run server",
-    "server": "node server/server.js",
-    "build": "ng build",
-    "build:prod": "ng build --configuration production",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "node server/server.js"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +19,7 @@
     "@types/cors": "^2.8.10",
     "@types/express": "^4.17.11",
     "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.15.2",

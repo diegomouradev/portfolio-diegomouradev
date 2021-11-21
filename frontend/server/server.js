@@ -8,17 +8,14 @@ const dotEnv = require("dotenv").config();
 const emailRoutes = require("./routes/emailRoutes");
 
 const PORT = process.env.PORT || 4000;
-const APP_FOLDER = path.resolve(__dirname, "../dist/portfolio");
+const APP_FOLDER = path.resolve(__dirname, "./views");
 
 const app = express();
 app.use(compression());
 app.use(express.json());
 
-var corsOptions = {
-  origin: "https://www.diegomoura.dev",
-};
-app.use(cors(corsOptions));
-
+app.use(cors());
+app.options("*", cors());
 // ---- APPLICATION API ---- //
 app.use("/api/email", emailRoutes);
 

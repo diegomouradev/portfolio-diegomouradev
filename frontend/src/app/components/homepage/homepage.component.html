@@ -2,14 +2,31 @@
   <section class="left">
     <img
       class="img main-title"
-      src="https://res.cloudinary.com/djot2xc6w/image/upload/v1634652607/diegomouradev/images/diegomoura-home.webp"
+      src="../../../assets/images/diego-moura-title.png"
+      srcset="../../../assets/images/diego-moura-title@2x.png 2x"
+      alt="diego moura"
+      [ngClass]="animationOn ? 'slide-in-left' : ''"
+    />
+    <img
+      class="img main-title main-title-mobile"
+      src="../../../assets/images/diego-moura-title-mobile.png"
+      srcset="../../../assets/images/diego-moura-title-mobile@2x.png 2x"
       alt="diego moura"
       [ngClass]="animationOn ? 'slide-in-left' : ''"
     />
 
     <img
-      class="main-photo"
-      src="https://res.cloudinary.com/djot2xc6w/image/upload/v1634652609/diegomouradev/images/diego-main-picture.webp"
+      class="img main-photo"
+      src="../../../assets/images/diego-moura-photo-home.png"
+      srcset="../../../assets/images/diego-moura-photo-home@2x.png x2"
+      alt="diego moura"
+      [ngClass]="animationOn ? 'fade-in' : ''"
+    />
+
+    <img
+      class="img main-photo main-photo-mobile"
+      src="../../../assets/images/diego-moura-photo-mobile.png"
+      srcset="../../../assets/images/diego-moura-photo-mobile@2x.png x2"
       alt="diego moura"
       [ngClass]="animationOn ? 'fade-in' : ''"
     />
@@ -31,7 +48,8 @@
     <div class="sub-title-wrapper">
       <img
         class="img sub-title"
-        src="https://res.cloudinary.com/djot2xc6w/image/upload/v1634652608/diegomouradev/images/frontend-home.webp"
+        src="../../../assets/images/front-end-home.png"
+        srcset="../../../assets/images/front-end-home.png x2"
         alt="front-end"
         [ngClass]="animationOn ? 'slide-in-right' : ''"
       />

@@ -1,3 +1,5 @@
+@import "./sass/typography";
+
 *,
 *::before,
 *::after {
@@ -30,9 +32,7 @@ html {
 }
 
 body {
-  font-family: "Source Code Pro", monospace;
-  font-size: 1.6rem;
-  font-weight: 300;
+  @extend .body1;
 }
 
 .img {

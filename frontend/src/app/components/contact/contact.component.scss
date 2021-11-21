@@ -2,20 +2,33 @@
 @import "../../../sass/mixins";
 .main-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 100vh;
+
+  @include respond(wid-600) {
+    grid-template-columns: 100%;
+  }
 }
 
 .left {
   background-color: $main-blue;
-  display: grid;
-  grid-template-columns: 1fr min-content;
+
+  @include respond(wid-600) {
+    display: none;
+  }
 }
 
 .right {
   background-color: $main-green;
   grid-column: 2/3;
   display: grid;
+
+  @include respond(wid-600) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  grid-template-rows: 100%;
 }
 
 .contact-form {
@@ -25,10 +38,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 10;
+  padding: 2rem;
 
   &__submit-btn {
     font-size: 1.8rem;
     font-weight: 700;
+    background-color: $main-green;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 0.4rem 0.7rem rgba(0, 0, 0, 0.25);
+    }
+    &:active {
+      transform: translateY(0rem);
+      box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  @include respond(wid-600) {
+    grid-row: 1/2;
   }
 }
 
@@ -74,6 +104,7 @@ textarea {
   border: 0.1rem solid $main-blue;
   border-radius: 0.3rem;
   color: $main-blue;
+  background-color: $main-green;
 }
 
 input::placeholder,
@@ -83,5 +114,32 @@ textarea::placeholder {
 }
 
 .alert {
-  font-weight: 700;
+  margin-top: 0.5rem;
+  text-align: right;
+  color: $main-blue;
+}
+
+.show-mobile {
+  display: none;
+  @include respond(wid-600) {
+    display: block;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    transform: rotate(180deg);
+    position: absolute;
+  }
+}
+
+input:autofill {
+  background-color: $main-green;
+}
+
+input[disabled] {
+  border-color: grey;
+  color: grey;
+
+  &:hover {
+    transform: unset;
+    box-shadow: unset;
+  }
 }

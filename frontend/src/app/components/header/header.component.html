@@ -1,0 +1,66 @@
+<header
+  class="main-header"
+  [ngClass]="isNavActive ? 'main-header__active' : ''"
+>
+  <nav class="navigation" [ngClass]="isNavActive ? 'navigation__active' : ''">
+    <ul class="navigation__links">
+      <li class="navigation__link">
+        <a
+          [ngClass]="currentRouteComponent === 'homepage' ? 'active' : ''"
+          routerLink="/"
+          (click)="toggleNav()"
+          >Home</a
+        >
+      </li>
+      <li class="navigation__link">
+        <a
+          [ngClass]="currentRouteComponent === 'about' ? 'active' : ''"
+          routerLink="/about"
+          (click)="toggleNav()"
+          >About</a
+        >
+      </li>
+      <li class="navigation__link">
+        <a
+          [ngClass]="currentRouteComponent === 'projects' ? 'active' : ''"
+          routerLink="/projects/word-search-game"
+          (click)="toggleNav()"
+          >Projects</a
+        >
+      </li>
+      <li class="navigation__link">
+        <a
+          [ngClass]="currentRouteComponent === 'contact' ? 'active' : ''"
+          routerLink="/contact"
+          (click)="toggleNav()"
+          >Contact</a
+        >
+      </li>
+    </ul>
+    <ul class="social__links">
+      <li class="social__link">
+        <a href="https://twitter.com/_DiegoMoura" target="blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </li>
+      <li class="social__link">
+        <a href="https://github.com/diegomouradev" target="blank"
+          ><i class="fab fa-github"></i
+        ></a>
+      </li>
+      <li class="social__link">
+        <a href="https://www.linkedin.com/in/diego-moura/" target="blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div
+  class="navigation__toggle"
+  (click)="toggleNav()"
+  [ngStyle]="toggleColor"
+  [ngClass]="animateToggle ? 'slide-in-top' : ''"
+>
+  <i class="fas fa-bars"></i>
+</div>

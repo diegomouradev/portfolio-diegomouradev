@@ -1,0 +1,40 @@
+@import "./sass/typography";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: unset;
+  outline: unset;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1 rem == 10px
+}
+
+body {
+  @extend .body1;
+}
+
+.img {
+  max-width: 100%;
+}

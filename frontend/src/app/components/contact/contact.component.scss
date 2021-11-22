@@ -1,0 +1,145 @@
+@import "../../../sass/variables.scss";
+@import "../../../sass/mixins";
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100vh;
+
+  @include respond(wid-600) {
+    grid-template-columns: 100%;
+  }
+}
+
+.left {
+  background-color: $main-blue;
+
+  @include respond(wid-600) {
+    display: none;
+  }
+}
+
+.right {
+  background-color: $main-green;
+  grid-column: 2/3;
+  display: grid;
+
+  @include respond(wid-600) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  grid-template-rows: 100%;
+}
+
+.contact-form {
+  height: 100%;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+  padding: 2rem;
+
+  &__submit-btn {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background-color: $main-green;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 0.4rem 0.7rem rgba(0, 0, 0, 0.25);
+    }
+    &:active {
+      transform: translateY(0rem);
+      box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  @include respond(wid-600) {
+    grid-row: 1/2;
+  }
+}
+
+.input-wrapper {
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.input-wrapper > label {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  transform: translateY(3rem);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus-within ~ label {
+  color: $main-blue;
+  transform: translateY(-3rem);
+  opacity: 1;
+}
+
+input:focus-within::placeholder {
+  color: transparent;
+}
+
+textarea:focus-within ~ label {
+  color: $main-blue;
+  transform: translateY(-3rem);
+  opacity: 1;
+}
+
+textarea:focus-within::placeholder {
+  color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 2rem 3rem;
+  font-family: inherit;
+  border: 0.1rem solid $main-blue;
+  border-radius: 0.3rem;
+  color: $main-blue;
+  background-color: $main-green;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: inherit;
+  color: $main-blue;
+}
+
+.alert {
+  margin-top: 0.5rem;
+  text-align: right;
+  color: $main-blue;
+}
+
+.show-mobile {
+  display: none;
+  @include respond(wid-600) {
+    display: block;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    transform: rotate(180deg);
+    position: absolute;
+  }
+}
+
+input:autofill {
+  background-color: $main-green;
+}
+
+input[disabled] {
+  border-color: grey;
+  color: grey;
+
+  &:hover {
+    transform: unset;
+    box-shadow: unset;
+  }
+}

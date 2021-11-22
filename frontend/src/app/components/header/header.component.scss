@@ -1,0 +1,131 @@
+@import "../../../sass/variables.scss";
+@import "../../../sass/mixins";
+@import "../../../sass/animations";
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 11rem;
+
+  position: absolute;
+  top: -21rem;
+  left: 0;
+
+  background-color: $main-blue;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+
+  &__active {
+    position: absolute;
+    top: 0rem;
+    z-index: 100;
+
+    @include respond(wid-768) {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.navigation {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 0.5fr;
+
+  &__links {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+
+    justify-content: space-around;
+    align-items: center;
+
+    @include respond(wid-768) {
+      width: unset;
+      flex-wrap: unset;
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    & a {
+      color: $main-green;
+      font-size: 3rem;
+      font-weight: 300;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__active {
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      reverse both;
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both;
+
+    @include respond(wid-768) {
+      display: block;
+      grid-template-columns: unset;
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+
+    width: 5rem;
+    height: 5rem;
+
+    font-size: 3rem;
+
+    background-color: $main-grey;
+    border-radius: 100%;
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 200;
+  }
+}
+
+.main-header__active ~ .navigation__toggle {
+  background-color: $main-green;
+}
+
+.navigation__link a.active {
+  text-decoration: underline;
+}
+
+.social {
+  &__links {
+    grid-column: 2/3;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  &__link {
+    & a {
+      color: $main-green;
+      font-size: 3rem;
+      font-weight: 300;
+      margin-right: 2rem;
+    }
+  }
+}
+
+.slide-in-top {
+  -webkit-animation: slide-in-top 0.5s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-top 0.5s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}

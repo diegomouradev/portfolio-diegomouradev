@@ -10,7 +10,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
-import { SafePipe } from './pipes/safe.pipe';
+import { SafePipe } from './shared/pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,12 @@ import { SafePipe } from './pipes/safe.pipe';
     ContactComponent,
     SafePipe,
   ],
-  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

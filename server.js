@@ -12,10 +12,7 @@ const app = express();
 app.use(compression());
 app.use(express.json());
 
-const corsOptions = {
-  origin: "https://diegomoura.dev",
-};
-app.use(cors(corsOptions));
+app.use(cors());
 
 // ---- APPLICATION API ---- //
 app.use("/api/email", emailRoutes);

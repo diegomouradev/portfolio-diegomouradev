@@ -1,4 +1,3 @@
-"use strict";
 const express = require("express");
 const compression = require("compression");
 const path = require("path");
@@ -16,13 +15,13 @@ app.use(express.json());
 const corsOptions = {
   origin: "https://diegomoura.dev",
 };
-app.use(cors());
+app.use(cors(corsOptions));
 
 // ---- APPLICATION API ---- //
 app.use("/api/email", emailRoutes);
 
 // ---- SERVE STATIC FILES ---- //
-app.use(express.static(__dirname + "/server/views"));
+app.use(express.static(path.join(__dirname + "/server/views/")));
 
 // ---- SERVE APPLICATION PATHS ---- //
 app.get("/*", function (req, res) {
@@ -30,11 +29,4 @@ app.get("/*", function (req, res) {
 });
 
 // ---- START UP THE NODE SERVER  ----
-app.listen(PORT, function () {
-  console.log(
-    "Node Express server for " +
-      app.name +
-      " listening on http://localhost:" +
-      PORT
-  );
-});
+app.listen(PORT);

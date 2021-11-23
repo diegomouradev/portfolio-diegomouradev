@@ -26,7 +26,7 @@ app.use(express.static(__dirname + "/server/views"));
 
 // ---- SERVE APPLICATION PATHS ---- //
 app.get("/*", function (req, res) {
-  res.status(200).sendFile(path.join(__dirname + "/server/views/index.html"));
+  res.sendFile(path.join(__dirname + "/server/views/index.html"));
 });
 
 // ---- START UP THE NODE SERVER  ----

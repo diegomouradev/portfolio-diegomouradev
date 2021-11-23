@@ -8,7 +8,6 @@ const dotEnv = require("dotenv").config();
 const emailRoutes = require("./server/routes/email-routes");
 
 const PORT = process.env.PORT || 4000;
-const APP_FOLDER = path.resolve(__dirname, "server/views");
 
 const app = express();
 app.use(compression());
@@ -23,12 +22,11 @@ app.use(cors());
 app.use("/api/email", emailRoutes);
 
 // ---- SERVE STATIC FILES ---- //
-app.use(express.static(APP_FOLDER));
+app.use(express.static(__dirname + "/server/views"));
 
 // ---- SERVE APPLICATION PATHS ---- //
-app.all("/*", function (req, res) {
-  res.status(200).sendFile(path.join(APP_FOLDER + "/index.html"));
-  console.log(res);
+app.get("/*", function (req, res) {
+  res.status(200).sendFile(path.join(__dirname + "/server/views/index.html"));
 });
 
 // ---- START UP THE NODE SERVER  ----

@@ -5,53 +5,25 @@
 
 .main-grid {
   display: grid;
-  height: 100vh;
-  grid-template-columns: 70% 30%;
-
-  @include respond(wid-768) {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
+  grid-template-rows: min-content 100%;
 }
 
 .right {
   background-color: $main-green;
-  grid-column: 2/3;
   grid-row: 1/2;
-
-  @include respond(wid-768) {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
 }
 
 .projects-list {
-  grid-column: 1/-1;
-  grid-row: 1/-1;
-  padding: 5rem 3rem;
+  width: 95%;
+  padding: 3rem 3rem;
 
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
-
-  @include respond(wid-900) {
-    justify-content: flex-start;
-  }
-  @include respond(wid-768) {
-    padding: 5rem 3rem 1rem 3rem;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 }
 
 .projects-item {
   display: grid;
-  grid-template-columns: 1fr min-content;
+  grid-template-columns: 1fr;
   grid-template-rows: min-content;
   padding: 1rem 0.9rem;
   gap: 0.5rem;

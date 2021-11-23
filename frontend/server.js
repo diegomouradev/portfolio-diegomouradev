@@ -5,10 +5,10 @@ const path = require("path");
 const cors = require("cors");
 const dotEnv = require("dotenv").config();
 
-const emailRoutes = require("./routes/emailRoutes");
+const emailRoutes = require("./server/routes/email-routes");
 
 const PORT = process.env.PORT || 4000;
-const APP_FOLDER = path.resolve(__dirname, "./views");
+const APP_FOLDER = path.resolve(__dirname, "./server/views");
 
 const app = express();
 app.use(compression());
@@ -16,6 +16,7 @@ app.use(express.json());
 
 app.use(cors());
 app.options("*", cors());
+
 // ---- APPLICATION API ---- //
 app.use("/api/email", emailRoutes);
 

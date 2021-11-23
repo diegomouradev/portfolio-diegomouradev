@@ -17,18 +17,19 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "./backend/server/views",
+            "outputPath": "server/views",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": ["src/favicon.ico", "src/assets", "src/_redirects"],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
               "src/sass/_variables.scss",
               "src/sass/_mixins.scss",
-              "src/sass/_animations.scss"
+              "src/sass/_animations.scss",
+              "src/sass/_typography.scss"
             ],
             "scripts": []
           },
@@ -119,7 +120,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "./backend/server",
+            "outputPath": "./server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },

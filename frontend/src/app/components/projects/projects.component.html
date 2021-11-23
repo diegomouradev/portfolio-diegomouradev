@@ -2,6 +2,16 @@
   <section class="left">
     <div class="project-grid">
       <div class="project-content" *ngIf="currentRoute === 'word_search_game'">
+        <div class="projects-links">
+          <a href="https://pokemon-ws-game.netlify.app/" target="blank"
+            ><span class="projects-icon"><i class="fas fa-desktop"></i></span
+          ></a>
+          <a
+            href="https://github.com/diegomouradev/pokemon-ws-game"
+            target="blank"
+            ><span class="projects-icon"><i class="fab fa-github"></i></span
+          ></a>
+        </div>
         <img
           class="project-img img"
           [ngClass]="animationOn ? 'fade-in-faster' : ''"
@@ -105,6 +115,16 @@
         />
 
         <div class="project" [ngClass]="animationOn ? 'slide-in-left' : ''">
+          <div class="projects-links">
+            <a href="https://diegomouradev.herokuapp.com/" target="blank"
+              ><span class="projects-icon"><i class="fas fa-desktop"></i></span
+            ></a>
+            <a
+              href="https://github.com/diegomouradev/portfolio_heroku"
+              target="blank"
+              ><span class="projects-icon"><i class="fab fa-github"></i></span
+            ></a>
+          </div>
           <h2 class="project-title">Django Portfolio</h2>
           <p class="project-meta">Djago + Heroku</p>
           <p class="project-text">
@@ -142,16 +162,6 @@
             </p>
           </div>
         </a>
-        <div class="projects-links">
-          <a href="https://pokemon-ws-game.netlify.app/" target="blank"
-            ><span class="projects-icon"><i class="fas fa-desktop"></i></span
-          ></a>
-          <a
-            href="https://github.com/diegomouradev/pokemon-ws-game"
-            target="blank"
-            ><span class="projects-icon"><i class="fab fa-github"></i></span
-          ></a>
-        </div>
       </li>
       <li
         class="projects-item"
@@ -242,16 +252,6 @@
             </p>
           </div>
         </a>
-        <div class="projects-links">
-          <a href="https://diegomouradev.herokuapp.com/" target="blank"
-            ><span class="projects-icon"><i class="fas fa-desktop"></i></span
-          ></a>
-          <a
-            href="https://github.com/diegomouradev/portfolio_heroku"
-            target="blank"
-            ><span class="projects-icon"><i class="fab fa-github"></i></span
-          ></a>
-        </div>
       </li>
     </ul>
   </section>

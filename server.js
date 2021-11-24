@@ -26,4 +26,6 @@ app.get("/*", function (req, res) {
 });
 
 // ---- START UP THE NODE SERVER  ----
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log(`APP running on http://localhost:${PORT}`);
+});

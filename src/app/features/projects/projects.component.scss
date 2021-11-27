@@ -1,7 +1,7 @@
-@import "../../../sass/variables.scss";
-@import "../../../sass/mixins";
-@import "../../../sass/animations";
-@import "../../../sass/typography";
+@import "/src/styles/animations";
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+@import "/src/styles/typography";
 
 .main-grid {
   display: grid;

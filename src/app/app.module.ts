@@ -10,7 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { SafePipe } from './shared/pipes/safe.pipe';
-import { NavigationModule } from './shared/navigation/navigation.module';
+import { NavigationModule } from '@shared/navigation/navigation.module';
 
 @NgModule({
   declarations: [

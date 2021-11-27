@@ -1,0 +1,107 @@
+<section class="right">
+  <ul class="projects-list">
+    <li
+      class="projects-item"
+      [ngClass]="currentRoute === 'word_search_game' ? 'active' : ''"
+    >
+      <a routerLink="./word-search-game">
+        <div class="projects-info">
+          <h2 class="projects-title">Word search game</h2>
+          <p class="projects-meta">Angular 10 + pokeAPI</p>
+          <p class="projects-description">
+            Error aperiam veniam dicta officia ducimus tempore ex eius, dolorum
+            esse accusantium enim, id ut vitae a assumenda?
+          </p>
+        </div>
+      </a>
+    </li>
+    <li
+      class="projects-item"
+      [ngClass]="currentRoute === 'memory_game' ? 'active' : ''"
+    >
+      <a routerLink="./memory-game">
+        <div class="projects-info">
+          <h2 class="projects-title">Memory Game</h2>
+          <p class="projects-meta">React + pokeAPI</p>
+          <p class="projects-description">
+            Error aperiam veniam dicta officia ducimus tempore ex eius, dolorum
+            esse accusantium enim, id ut vitae a assumenda?
+          </p>
+        </div>
+      </a>
+      <div class="projects-links">
+        <a href="https://pokemon-memory-game-react.netlify.app/" target="blank"
+          ><span class="projects-icon"><i class="fas fa-desktop"></i></span
+        ></a>
+        <a
+          href="https://github.com/diegomouradev/pokemon-memory-game"
+          target="blank"
+          ><span class="projects-icon"><i class="fab fa-github"></i></span
+        ></a>
+      </div>
+    </li>
+    <li
+      class="projects-item"
+      [ngClass]="currentRoute === 'nested_todos' ? 'active' : ''"
+    >
+      <a routerLink="./nested-todos">
+        <div class="projects-info">
+          <h2 class="projects-title">NestedTodos</h2>
+          <p class="projects-meta">Vanilla JS + localStorage</p>
+          <p class="projects-description">
+            Error aperiam veniam dicta officia ducimus tempore ex eius, dolorum
+            esse accusantium enim, id ut vitae a assumenda?
+          </p>
+        </div>
+      </a>
+      <div class="projects-links">
+        <a href="https://nestedtodos.netlify.app/view/#/all" target="blank"
+          ><span class="projects-icon"><i class="fas fa-desktop"></i></span
+        ></a>
+        <a href="https://github.com/diegomouradev/nestedTodos" target="blank"
+          ><span class="projects-icon"><i class="fab fa-github"></i></span
+        ></a>
+      </div>
+    </li>
+    <li
+      class="projects-item"
+      [ngClass]="currentRoute === 'todo_tracker' ? 'active' : ''"
+    >
+      <a routerLink="./todo-tracker">
+        <div class="projects-info">
+          <h2 class="projects-title">Todo Tracker</h2>
+          <p class="projects-meta">Angular 12</p>
+          <p class="projects-description">
+            Error aperiam veniam dicta officia ducimus tempore ex eius, dolorum
+            esse accusantium enim, id ut vitae a assumenda?
+          </p>
+        </div>
+      </a>
+      <div class="projects-links">
+        <a href="https://todo-app-angular-diego.netlify.app/" target="blank"
+          ><span class="projects-icon"><i class="fas fa-desktop"></i></span
+        ></a>
+        <a
+          href="https://github.com/diegomouradev/todo-app-angular"
+          target="blank"
+          ><span class="projects-icon"><i class="fab fa-github"></i></span
+        ></a>
+      </div>
+    </li>
+    <li
+      class="projects-item"
+      [ngClass]="currentRoute === 'django_heroku' ? 'active' : ''"
+    >
+      <a routerLink="./django-portfolio">
+        <div class="projects-info">
+          <h2 class="projects-title">Django Portfolio</h2>
+          <p class="projects-meta">Django + Heroku</p>
+          <p class="projects-description">
+            Error aperiam veniam dicta officia ducimus tempore ex eius, dolorum
+            esse accusantium enim, id ut vitae a assumenda?
+          </p>
+        </div>
+      </a>
+    </li>
+  </ul>
+</section>

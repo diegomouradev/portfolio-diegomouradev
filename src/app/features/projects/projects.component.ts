@@ -7,15 +7,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
-  currentRoute: string;
   animationOn: boolean = false;
+  currentRoute: string;
 
   constructor(private route: ActivatedRoute) {
-    this.currentRoute = this.route.snapshot.data.project;
+    this.currentRoute = this.route.routeConfig.path;
   }
 
   ngOnInit(): void {
-    this.currentRoute = this.route.snapshot.data.project;
     this.animationOn = true;
   }
 }

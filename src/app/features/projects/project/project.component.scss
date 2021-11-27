@@ -1,0 +1,74 @@
+@import "../../../../sass/variables.scss";
+@import "../../../../sass/mixins";
+@import "../../../../sass/animations";
+@import "../../../../sass/typography";
+
+.left {
+  background-color: $main-blue;
+
+  @include respond(wid-768) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+}
+
+.project-content {
+  grid-column: 1/2;
+  grid-row: 2/-1;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, min-content);
+
+  @include respond(wid-900) {
+    grid-column: 1/3;
+  }
+}
+
+.project-img {
+  padding: 5rem 5rem 1rem 5rem;
+}
+
+.project-text,
+.project-title,
+.project-meta {
+  grid-column: 1/2;
+  color: $main-green;
+  font-size: 1.6rem;
+  padding: 0 5rem 1rem 5rem;
+
+  @include respond(wid-900) {
+    padding: 0 3rem 1rem 3rem;
+  }
+}
+.project-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  padding: 0 5rem;
+
+  @include respond(wid-900) {
+    font-size: 2.4rem;
+    line-height: 1;
+    padding: 0 3rem 1rem 3rem;
+  }
+}
+
+.project-meta {
+  font-size: 2.4;
+  font-weight: 300;
+}
+
+.project-heading {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  height: 80vh;
+
+  @include respond(wid-900) {
+    height: 30vh;
+  }
+}

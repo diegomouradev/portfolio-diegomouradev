@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class NavigationComponent implements OnInit {
   currentRouteComponent: any = '';
   isNavActive: boolean = false;
   toggleColor: object;
   animateToggle: boolean = false;
+
   constructor(private route: ActivatedRoute) {
     this.currentRouteComponent = this.route.snapshot.data.urlPath;
   }

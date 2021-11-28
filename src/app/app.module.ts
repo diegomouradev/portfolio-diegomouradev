@@ -2,28 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+// APP ROOT
 import { AppComponent } from './app.component';
 
-import { HomepageComponent } from './components/homepage/homepage.component';
-import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { FormsModule } from '@angular/forms';
-import { SafePipe } from './shared/pipes/safe.pipe';
+// FEATURE MODULES
 import { NavigationModule } from '@shared/navigation/navigation.module';
 
+// ROUTING MODULES
+import { AppRoutingModule } from './app-routing.module';
+
+// COMPONENTS
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { AboutComponent } from './components/about/about.component';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomepageComponent,
-    AboutComponent,
-    ContactComponent,
-    SafePipe,
-  ],
+  declarations: [AppComponent, HomepageComponent, AboutComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
     NavigationModule,
   ],

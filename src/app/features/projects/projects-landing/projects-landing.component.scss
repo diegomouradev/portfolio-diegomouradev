@@ -1,0 +1,37 @@
+@import "/src/styles/animations";
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+@import "/src/styles/typography";
+
+.projects-landing {
+  &__main-content {
+    width: 100vw;
+    background-color: $main-blue;
+  }
+
+  &__page-title {
+    display: block;
+    color: $main-green;
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 5rem;
+  }
+}
+
+.logos {
+  &__logo {
+    width: 19rem;
+  }
+
+  &__logo img {
+    width: 100%;
+  }
+}
+
+.logos__logo:not(:nth-child(5)) {
+  margin-right: 5rem;
+}

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ProjectComponent } from './project/project.component';
+import { ProjectsLandingComponent } from './projects-landing/projects-landing.component';
 import { ProjectsComponent } from './projects.component';
 
 const routes: Routes = [
@@ -9,6 +10,10 @@ const routes: Routes = [
     path: '',
     component: ProjectsComponent,
     children: [
+      {
+        path: '',
+        component: ProjectsLandingComponent,
+      },
       {
         path: 'word-search-game',
         component: ProjectComponent,

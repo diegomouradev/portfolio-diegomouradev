@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 
 const routes: Routes = [
@@ -24,8 +23,8 @@ const routes: Routes = [
   },
   {
     path: 'contact',
-    component: ContactComponent,
-    data: { urlPath: 'contact' },
+    loadChildren: () =>
+      import('./features/contact/contact.module').then((m) => m.ContactModule),
   },
   { path: '', redirectTo: '/homepage', pathMatch: 'full' },
   { path: '**', redirectTo: '/homepage', pathMatch: 'full' },

@@ -1,0 +1,59 @@
+<form class="contact-form" #contactForm="ngForm" (ngSubmit)="onFormSubmit()">
+  <div class="input-wrapper">
+    <input
+      id="name-input"
+      type="text"
+      [(ngModel)]="dataFromForm.name"
+      name="name"
+      placeholder="Your name"
+      required
+      #name="ngModel"
+    />
+    <label for="name-input">Your name:</label>
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+      <div *ngIf="name.errors?.required">Name is required.</div>
+    </div>
+  </div>
+
+  <div class="input-wrapper">
+    <input
+      type="email"
+      id="email-input"
+      [(ngModel)]="dataFromForm.email"
+      name="email"
+      placeholder="Your e-mail"
+      required
+      #email="ngModel"
+    />
+    <label for="email-input" required>Your e-mail:</label>
+    <div *ngIf="email.invalid && email.touched" class="alert">
+      <div *ngIf="email.errors?.required">E-mail is required.</div>
+    </div>
+  </div>
+
+  <div class="input-wrapper">
+    <textarea
+      id="message-input"
+      [(ngModel)]="dataFromForm.message"
+      name="message"
+      placeholder="Hey! What's up?"
+      required
+      rows="15"
+      cols="30"
+      required
+      minlength="1"
+      #message="ngModel"
+    ></textarea>
+    <label for="message-input">Sup?</label>
+    <div *ngIf="message.invalid && message.touched" class="alert">
+      <div *ngIf="message.errors?.required">Message is required.</div>
+    </div>
+  </div>
+
+  <input
+    class="contact-form__submit-btn"
+    type="submit"
+    value="send"
+    [disabled]="!contactForm.form.valid"
+  />
+</form>

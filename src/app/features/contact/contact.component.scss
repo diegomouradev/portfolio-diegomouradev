@@ -1,0 +1,46 @@
+@import "/src/styles/animations";
+@import "/src/styles/mixins";
+@import "/src/styles/variables";
+@import "/src/styles/typography";
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100vh;
+
+  @include respond(wid-600) {
+    grid-template-columns: 100%;
+  }
+}
+
+.left {
+  background-color: $main-blue;
+
+  @include respond(wid-600) {
+    display: none;
+  }
+}
+
+.right {
+  background-color: $main-green;
+  grid-column: 2/3;
+  display: grid;
+
+  @include respond(wid-600) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  grid-template-rows: 100%;
+}
+
+.show-mobile {
+  display: none;
+  @include respond(wid-600) {
+    display: block;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    transform: rotate(180deg);
+    position: absolute;
+  }
+}

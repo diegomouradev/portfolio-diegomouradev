@@ -1,12 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class EmailService {
+@Injectable()
+export class ContactService {
   readonly BASE_URL_PROD = 'https://www.diegomoura.dev/api/email/send-email';
 
   httpOptions = {
@@ -17,7 +14,7 @@ export class EmailService {
 
   constructor(private http: HttpClient) {}
 
-  sedEmail(formData): Observable<any> {
+  sendEmail(formData): Observable<any> {
     return this.http.post(`${this.BASE_URL_PROD}`, formData, this.httpOptions);
   }
 }

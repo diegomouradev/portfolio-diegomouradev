@@ -22,6 +22,11 @@ const routes: Routes = [
     data: { urlPath: 'about' },
   },
   {
+    path: 'blog',
+    loadChildren: () =>
+      import('./features/blog/blog.module').then((m) => m.BlogModule),
+  },
+  {
     path: 'contact',
     loadChildren: () =>
       import('./features/contact/contact.module').then((m) => m.ContactModule),

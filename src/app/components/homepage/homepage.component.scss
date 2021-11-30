@@ -33,6 +33,8 @@
 }
 
 .main-title {
+  max-width: 71.6rem;
+  max-height: 36.9rem;
   grid-column: 1/2;
   grid-row: 1/2;
   justify-self: end;
@@ -49,6 +51,22 @@
       align-self: end;
       z-index: 10;
     }
+  }
+}
+
+#diego {
+  transform: translate(0rem, -2.5rem);
+  @include respond(wid-768) {
+    transform: translate(0rem, -2.5rem) scale(0.9);
+    transform-origin: right;
+  }
+}
+
+#moura {
+  transform: translate(7rem, 20rem);
+  @include respond(wid-768) {
+    transform: translate(7rem, 20rem) scale(0.9);
+    transform-origin: right;
   }
 }
 

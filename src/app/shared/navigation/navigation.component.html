@@ -36,6 +36,14 @@
           >Contact</a
         >
       </li>
+      <li class="navigation__link">
+        <a
+          [ngClass]="currentRouteComponent === 'blog' ? 'active' : ''"
+          routerLink="/blog"
+          (click)="toggleNav()"
+          >Blog</a
+        >
+      </li>
     </ul>
     <ul class="social__links">
       <li class="social__link">

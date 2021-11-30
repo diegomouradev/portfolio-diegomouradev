@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactForm } from '@features/contact/contact-form/contact-form';
+import { Observable } from 'rxjs';
 import { ContactService } from './contact.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { ContactService } from './contact.service';
 })
 export class ContactFormComponent implements OnInit {
   dataFromForm = { name: '', email: '', message: '' };
+  contactForm$;
 
   constructor(private contactService: ContactService) {}
 
@@ -22,8 +24,12 @@ export class ContactFormComponent implements OnInit {
       this.dataFromForm.message,
       Date()
     );
-    this.contactService
+    this.contactForm$ = this.contactService
       .sendEmail(dataToSubmit)
       .subscribe((res) => console.log(res));
+  }
+
+  ngOnDestroy(): void {
+    this.contactForm$.unsubscribe();
   }
 }

@@ -21,14 +21,16 @@ exports.sendEmail = async (req, res, next) => {
           name: `${req.body.name}`,
           email: `${req.body.email}`,
           message: `${req.body.message}`,
+          date: `${req.body.date}`,
         },
         TemplateLanguage: true,
-        Subject: "diegomoura.dev new message",
+        Subject: "Contact message from diegomoura.dev",
         TextPart: "{{var:email}}",
         HTMLPart: `
         
-        <p>{{var:email}}</p>
-        <p>{{var:name}}</p>
+        <p>FROM:{{var:name}}</p>
+        <p>EMAIL: {{var:email}}</p>
+        <p>{{var:message}}</p>
         <p>{{var:message}}</p>
         `,
       },

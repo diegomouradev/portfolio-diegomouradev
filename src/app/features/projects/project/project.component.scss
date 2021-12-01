@@ -4,6 +4,7 @@
 @import "/src/styles/typography";
 
 .left {
+  width: 100vw;
   background-color: $main-blue;
 
   @include respond(wid-768) {

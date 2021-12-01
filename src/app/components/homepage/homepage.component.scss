@@ -54,22 +54,6 @@
   }
 }
 
-#diego {
-  transform: translate(0rem, -2.5rem);
-  @include respond(wid-768) {
-    transform: translate(0rem, -2.5rem) scale(0.9);
-    transform-origin: right;
-  }
-}
-
-#moura {
-  transform: translate(7rem, 20rem);
-  @include respond(wid-768) {
-    transform: translate(7rem, 20rem) scale(0.9);
-    transform-origin: right;
-  }
-}
-
 .main-photo {
   grid-column: 1/2;
   grid-row: 1/2;

@@ -1,4 +1,8 @@
-<form class="contact-form" #contactForm="ngForm" (ngSubmit)="onFormSubmit()">
+<form
+  class="contact-form"
+  #contactForm="ngForm"
+  (ngSubmit)="onFormSubmit(); contactForm.reset()"
+>
   <div class="input-wrapper">
     <input
       id="name-input"

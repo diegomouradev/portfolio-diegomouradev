@@ -1,16 +1,6 @@
 <section class="left">
   <div class="project-grid">
     <div class="project-content" *ngIf="currentRoute === 'word_search_game'">
-      <div class="projects-links">
-        <a href="https://pokemon-ws-game.netlify.app/" target="blank"
-          ><span class="projects-icon"><i class="fas fa-desktop"></i></span
-        ></a>
-        <a
-          href="https://github.com/diegomouradev/pokemon-ws-game"
-          target="blank"
-          ><span class="projects-icon"><i class="fab fa-github"></i></span
-        ></a>
-      </div>
       <img
         class="project-img img"
         [ngClass]="animationOn ? 'fade-in-faster' : ''"
@@ -83,28 +73,7 @@
         </p>
       </div>
     </div>
-    <div class="project-content" *ngIf="currentRoute === 'todo_tracker'">
-      <img
-        class="project-img img"
-        [ngClass]="animationOn ? 'fade-in-faster' : ''"
-        src="https://res.cloudinary.com/djot2xc6w/image/upload/c_scale,w_604/v1634652607/diegomouradev/images/todo-tracker.webp"
-        alt=""
-      />
 
-      <div class="project" [ngClass]="animationOn ? 'slide-in-left' : ''">
-        <h2 class="project-title">Todo Tracker</h2>
-        <p class="project-meta">Angular12 + localStorage</p>
-        <p class="project-text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-          aliquid pariatur, distinctio iusto repudiandae magni, deserunt et
-          dolorum amet eligendi, officia sunt laboriosam minima. Error dolorum
-          rem distinctio animi commodi? Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Eos nulla delectus quisquam. Voluptas illo quibusdam
-          quasi aperiam? Excepturi consequatur ipsam dolorum nam omnis! Ducimus
-          beatae ullam esse, molestiae reiciendis animi!
-        </p>
-      </div>
-    </div>
     <div class="project-content" *ngIf="currentRoute === 'django_heroku'">
       <img
         class="project-img img"

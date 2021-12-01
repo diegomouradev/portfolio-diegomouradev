@@ -27,6 +27,7 @@ export class ContactFormComponent implements OnInit {
     this.contactForm$ = this.contactService
       .sendEmail(dataToSubmit)
       .subscribe((res) => console.log(res));
+    this.dataFromForm = { name: '', email: '', message: '' };
   }
 
   ngOnDestroy(): void {

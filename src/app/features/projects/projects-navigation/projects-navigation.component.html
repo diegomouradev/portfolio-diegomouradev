@@ -1,4 +1,4 @@
-<section class="right">
+<section class="navigation__wrapper">
   <ul class="projects-list">
     <li
       class="projects-item"
@@ -6,14 +6,21 @@
     >
       <a routerLink="./word-search-game">
         <div class="projects-info">
-          <h2 class="projects-title">Word search game</h2>
+          <h2 class="projects-title">Word Search Game</h2>
           <p class="projects-meta">Angular 10 + pokeAPI</p>
-          <p class="projects-description">
-            Error aperiam veniam dicta officia ducimus tempore ex eius, dolorum
-            esse accusantium enim, id ut vitae a assumenda?
-          </p>
+          <p class="projects-description">Can you find all the Pokemons?</p>
         </div>
       </a>
+      <div class="projects-links">
+        <a href="https://pokemon-ws-game.netlify.app/" target="blank"
+          ><span class="projects-icon"><i class="fas fa-desktop"></i></span
+        ></a>
+        <a
+          href="https://github.com/diegomouradev/pokemon-ws-game"
+          target="blank"
+          ><span class="projects-icon"><i class="fab fa-github"></i></span
+        ></a>
+      </div>
     </li>
     <li
       class="projects-item"
@@ -24,8 +31,7 @@
           <h2 class="projects-title">Memory Game</h2>
           <p class="projects-meta">React + pokeAPI</p>
           <p class="projects-description">
-            Error aperiam veniam dicta officia ducimus tempore ex eius, dolorum
-            esse accusantium enim, id ut vitae a assumenda?
+            Test you memory, beat your highest score.
           </p>
         </div>
       </a>
@@ -49,8 +55,7 @@
           <h2 class="projects-title">NestedTodos</h2>
           <p class="projects-meta">Vanilla JS + localStorage</p>
           <p class="projects-description">
-            Error aperiam veniam dicta officia ducimus tempore ex eius, dolorum
-            esse accusantium enim, id ut vitae a assumenda?
+            The Matryoshka Doll of the "To do" lists.
           </p>
         </div>
       </a>
@@ -63,31 +68,7 @@
         ></a>
       </div>
     </li>
-    <li
-      class="projects-item"
-      [ngClass]="currentRoute === 'todo_tracker' ? 'active' : ''"
-    >
-      <a routerLink="./todo-tracker">
-        <div class="projects-info">
-          <h2 class="projects-title">Todo Tracker</h2>
-          <p class="projects-meta">Angular 12</p>
-          <p class="projects-description">
-            Error aperiam veniam dicta officia ducimus tempore ex eius, dolorum
-            esse accusantium enim, id ut vitae a assumenda?
-          </p>
-        </div>
-      </a>
-      <div class="projects-links">
-        <a href="https://todo-app-angular-diego.netlify.app/" target="blank"
-          ><span class="projects-icon"><i class="fas fa-desktop"></i></span
-        ></a>
-        <a
-          href="https://github.com/diegomouradev/todo-app-angular"
-          target="blank"
-          ><span class="projects-icon"><i class="fab fa-github"></i></span
-        ></a>
-      </div>
-    </li>
+
     <li
       class="projects-item"
       [ngClass]="currentRoute === 'django_heroku' ? 'active' : ''"
@@ -97,11 +78,20 @@
           <h2 class="projects-title">Django Portfolio</h2>
           <p class="projects-meta">Django + Heroku</p>
           <p class="projects-description">
-            Error aperiam veniam dicta officia ducimus tempore ex eius, dolorum
-            esse accusantium enim, id ut vitae a assumenda?
+            Unchain the power of server side programming!
           </p>
         </div>
       </a>
+      <div class="projects-links">
+        <a href="https://diegomouradev.herokuapp.com/" target="blank"
+          ><span class="projects-icon"><i class="fas fa-desktop"></i></span
+        ></a>
+        <a
+          href="https://github.com/diegomouradev/portfolio_heroku.git"
+          target="blank"
+          ><span class="projects-icon"><i class="fab fa-github"></i></span
+        ></a>
+      </div>
     </li>
   </ul>
 </section>

@@ -6,6 +6,7 @@
 .projects-landing {
   &__main-content {
     width: 100vw;
+    height: 100vh;
     background-color: $main-blue;
   }
 
@@ -16,15 +17,17 @@
 
   &__logos {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 10rem 5rem;
+    padding: 5rem 5rem;
   }
 }
 
 .logos {
   &__logo {
-    width: 19rem;
+    width: 17rem;
+    margin: 2rem;
   }
 
   &__logo img {

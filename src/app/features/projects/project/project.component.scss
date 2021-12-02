@@ -5,7 +5,7 @@
 
 .left {
   width: 100vw;
-  background-color: $main-blue;
+  background-color: $dark-grey-1;
 
   @include respond(wid-768) {
     grid-column: 1/2;
@@ -39,7 +39,7 @@
 .project-title,
 .project-meta {
   grid-column: 1/2;
-  color: $main-green;
+  color: $dark-grey-2;
   font-size: 1.6rem;
   padding: 0 5rem 1rem 5rem;
 

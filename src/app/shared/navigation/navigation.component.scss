@@ -13,7 +13,7 @@
   top: -21rem;
   left: 0;
 
-  background-color: $main-blue;
+  background-color: $dark-grey-1;
   transition: all 0.2s ease-in-out;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
 
@@ -55,7 +55,7 @@
 
   &__link {
     & a {
-      color: $main-green;
+      color: $light-grey;
       font-size: 3rem;
       font-weight: 300;
 
@@ -75,7 +75,13 @@
       grid-template-columns: unset;
     }
   }
+}
 
+.main-header__active ~ .navigation__toggle {
+  background-color: $grey;
+}
+
+.navigation {
   &__toggle {
     position: absolute;
     top: 3rem;
@@ -84,11 +90,9 @@
     width: 5rem;
     height: 5rem;
 
-    font-size: 3rem;
-
-    background-color: $main-grey;
+    background-color: $grey;
     border-radius: 100%;
-    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0.1rem 0.1rem 1.3rem rgba(0, 0, 0, 0.5);
 
     display: flex;
     justify-content: center;
@@ -96,10 +100,30 @@
     cursor: pointer;
     z-index: 200;
   }
-}
 
-.main-header__active ~ .navigation__toggle {
-  background-color: $main-green;
+  &__toggle-hamburger {
+    width: 2.8rem;
+    height: 0.2rem;
+    border-bottom: 0.3rem solid $accent-green;
+    position: relative;
+
+    &::before {
+      content: " ";
+      width: 100%;
+      border-bottom: 0.3rem solid $accent-green;
+      position: absolute;
+      top: -1rem;
+      left: 0;
+    }
+    &::after {
+      content: " ";
+      width: 100%;
+      border-bottom: 0.3rem solid $accent-green;
+      position: absolute;
+      top: 1rem;
+      left: 0;
+    }
+  }
 }
 
 .navigation__link a.active {
@@ -116,7 +140,7 @@
 
   &__link {
     & a {
-      color: $main-green;
+      color: $light-grey;
       font-size: 3rem;
       font-weight: 300;
       margin-right: 2rem;

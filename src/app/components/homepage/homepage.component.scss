@@ -121,11 +121,8 @@
 .sub-title-wrapper {
   grid-column: 2/3;
   grid-row: 1/2;
-  display: flex;
-
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: end;
+  justify-self: flex-end;
+  align-self: end;
 
   @include respond(wid-768) {
     grid-column: 2/3;
